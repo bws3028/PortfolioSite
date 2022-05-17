@@ -1,0 +1,252 @@
+/*** CSS Reset ***/
+html,
+body {
+  border: 0;
+  font-family: Helvetica-Neue, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+/* stylelint-disable-next-line no-duplicate-selectors */
+div,
+span,
+object,
+iframe,
+img,
+table,
+caption,
+thead,
+tbody,
+tfoot,
+tr,
+tr,
+td,
+article,
+aside,
+canvas,
+details,
+figure,
+hgroup,
+menu,
+nav,
+footer,
+header,
+section,
+summary,
+mark,
+audio,
+video {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+ins,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+b,
+i,
+hr,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+legend,
+label {
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+
+article,
+aside,
+canvas,
+figure,
+figure img,
+figcaption,
+hgroup,
+footer,
+header,
+nav,
+section,
+audio,
+video {
+  display: block;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+caption,
+th,
+td {
+  text-align: left;
+  vertical-align: middle;
+}
+
+a img {
+  border: 0;
+}
+
+:focus {
+  outline: 0;
+}
+
+/*** End Global Reset ***/
+
+/*** Color Variables ***/
+:root {
+  --dark-green: #5f7161;
+  --green: #6d8b74;
+  --cream: #efead8;
+  --gray: #d0c9c0;
+  --white: #fafafa;
+  --black: #333;
+}
+
+/*** Styles ***/
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--white);
+}
+
+.heading {
+  width: 100%;
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--black);
+}
+
+.heading > h1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 45px;
+  letter-spacing: 3px;
+}
+
+.heading > p {
+  font-weight: thin;
+  letter-spacing: 2px;
+}
+
+.combined-image {
+  height: 300px;
+  width: 100%;
+}
+
+.elephant-image {
+  position: absolute;
+  top: -50px;
+  left: 500px;
+  height: 175px;
+  width: 325px;
+  color: var(--white);
+  z-index: 1;
+}
+
+.sand-image {
+  position: absolute;
+  right: 0;
+  top: -105px;
+  width: 400px;
+}
+
+.grass-image {
+  position: absolute;
+  bottom: -15px;
+  width: 600px;
+  z-index: -1;
+}
+
+.cloud-image {
+  position: absolute;
+  animation: move-up-down 1.75s linear infinite;
+  width: 200px;
+  top: -375px;
+  right: 300px;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+@keyframes move-up-down {
+  0%,
+  100% {
+    top: -325px;
+  }
+
+  50% {
+    top: -315px;
+  }
+}
+
+.sand {
+  position: absolute;
+  width: 100%;
+  height: 600px;
+  background: var(--cream);
+  z-index: 0;
+}
+
+.welcome {
+  position: absolute;
+  width: 600px;
+  top: 250px;
+  right: 300px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.welcome > h1 {
+  font-size: 35px;
+  font-weight: bold;
+  color: var(--black);
+  margin-bottom: 10px;
+}
+
+.welcome > p {
+  font-size: 20px;
+}
+
+.skills-section {
+  width: 100%;
+  height: 800px;
+  background: var(--green);
+}
+
+.bottom {
+  width: 100%;
+  height: 100px;
+  background-color: var(--dark-green);
+}
